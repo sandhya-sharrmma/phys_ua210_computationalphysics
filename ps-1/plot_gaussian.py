@@ -3,11 +3,16 @@ import numpy as np
 
 mean = 0
 std = 3
+x_range = np.linspace(-10, 10, 100)
 
-values = np.random.normal(loc = mean, scale = std, size = 100000)
+def gaussian(x, mu, sigma):
+    value = 1.0 / (np.sqrt(2.0 * np.pi) * sigma) * np.exp(-np.power((x - mu) / sigma, 2.0) / 2)
+    return value 
 
-plt.ylabel("Probability")
+plt.xlabel("Values over the range [-10, 10]")
+plt.ylabel("Normalized Gaussian value")
 plt.title("Gussian Curve")
-plt.hist(values, range = (-10,10), bins = 500, density = True)
+plt.plot(x_range, gaussian(x_range, mean, std))
 plt.savefig('gaussian.png')
 plt.show()
+
