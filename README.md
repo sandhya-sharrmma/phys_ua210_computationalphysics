@@ -9,4 +9,4 @@ Added ps-1 that includes a python script to generate a Gaussian curve (plot_gaus
 Added ps-2 with three python scripts to solve questions 2,3 and 4 along with a PDF with fully documented work of the entire assignment. 
 
 ## September 23, 2023: Problem Set 03
-Added ps-3 containing four folders for each question. Each folder contains the python file as per the question and its corresponsind output graphs and results. It also contains a PDF with fully documented work of the entire assignment. 
+Added ps-3 containing four folders for each question. Each folder contains the python file as per the question and its corresponsing output graphs and results. It also contains a PDF with fully documented work of the entire assignment. 
