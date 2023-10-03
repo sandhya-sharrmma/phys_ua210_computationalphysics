@@ -51,7 +51,7 @@ plt.plot(x_range, psi_3_range, label = "n=3")
 plt.legend()
 plt.title('Wavefunction of nth Enery Level of a One-Dimensional Quantum Harmonic Oscillator')
 plt.xlabel('x(m)')
-plt.ylabel('$\Psi(n,x)$')
+plt.ylabel('$\Psi(n,x) (m^{-1/2})$')
 plt.show()
 
 
