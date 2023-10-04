@@ -10,3 +10,6 @@ Added ps-2 with three python scripts to solve questions 2,3 and 4 along with a P
 
 ## September 23, 2023: Problem Set 03
 Added ps-3 containing four folders for each question. Each folder contains the python file as per the question and its corresponsing output graphs and results. It also contains a PDF with fully documented work of the entire assignment. 
+
+## October 3, 2023: Problem Set 04
+Added ps-4 containing five .py files for three questions: one each for questions 1 and 2 and three for question 3. It also contains a PDF with an analysis report of the entire assignment. 
