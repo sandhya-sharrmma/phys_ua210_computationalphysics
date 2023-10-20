@@ -13,9 +13,11 @@ import numpy as np
 from numpy import ones,copy,cos,tan,pi,linspace
 import scipy.integrate as integrate
 
+#defining the gamma integrand
 def gamma_integrand(a,x):
     return (x**(a-1))*math.exp(-x)
 
+#creating the range of x values and the corresponding gamma integrand values for different values of a
 x_range = np.arange(0, 5, 0.1) 
 gamma_2_range = np.empty(shape = (0,)) 
 gamma_3_range = np.empty(shape = (0,)) 
@@ -29,6 +31,7 @@ for i in range(x_range.size):
     gamma_3_range = np.append(gamma_3_range, gamma3)
     gamma_4_range = np.append(gamma_4_range, gamma4)
 
+#plotting the gamma integrand distribution for different values of a
 plt.plot(x_range, gamma_2_range, label = "a = 2")
 plt.plot(x_range, gamma_3_range, label = "a = 3")
 plt.plot(x_range, gamma_4_range, label = "a = 4")
@@ -37,9 +40,11 @@ plt.xlabel('x')
 plt.ylabel("gamma(x)")
 plt.title("Gamma Distribution for Different Values of a")
 
+#defining the gamma integrand after changing the variables
 def gamma_integrand_cov(a,x):
     return np.exp((a-1)*np.log(x)-x) 
 
+#defining the Gaussian quadrature function
 def gaussxw(N):
 
     # Initial approximation to roots of the Legendre polynomial
@@ -81,8 +86,6 @@ def gamma(a):
         z = xp[i]
         integration += wp[i] * gamma_integrand_cov(a, ((a-1)*z)/(1-z)) * (a-1)/((1-z)**2) #rescaling the integral from (0, inf) to (0,1)
     return integration
-
-
 
 print()
 print("Values for gamma functions: ")

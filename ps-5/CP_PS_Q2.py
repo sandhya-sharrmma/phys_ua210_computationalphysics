@@ -23,6 +23,7 @@ plt.ylabel("Signal (V)")
 plt.title("Signal vs Time")
 plt.show()
 
+#defining the polynomial fit function
 def polynomial_fit(order, x, y):
     """
     This function fits a polynomial of particular order to the data provided.
@@ -96,6 +97,7 @@ plt.title("Data Fitting using Polynomial Function of Order 8 with Residuals")
 plt.legend()
 plt.show()
 
+#defining the trigonometric fit function
 def trig_fit(n, q, x, y):
     
     """
@@ -104,11 +106,11 @@ def trig_fit(n, q, x, y):
     :param x: array of independent variable
     :param y: array of dependent variable
     :param n: number of terms in the fourier series
-    :param q: scale factor for the fourier series
+    :param q: scale factor for the fundamental frequency of the fourier series
     :return: y_model: array of dependent variable for the fitted trigonometric function
     """
      
-    f = q*(np.max(x))
+    f = q*(np.max(x)) #scaling the fundamental frequency by q
     A = np.zeros((len(x), 2*n+1))
     A[:, 0] = 1
 
@@ -153,11 +155,11 @@ plt.title("Data Fitting using Trigonometric Functions")
 plt.legend()
 plt.show()
 
-#calculating residuals for the trigonometric fit
+#calculating residuals for the trigonometric fits
 residuals_half = abs(signal - trig_ymodel_half)
 residuals_2 = abs(signal - trig_ymodel_2)
 
-#calculating r^2 for the trigonometric fit
+#calculating r^2 for the trigonometric fits
 ss_res_half = np.sum(residuals_half**2)
 ss_tot_half = np.sum((signal - np.mean(signal))**2)
 r_squared_half = 1 - (ss_res_half/ss_tot_half)
